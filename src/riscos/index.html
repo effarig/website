@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <title>RISC OS Software</title>
+  </head>
+  <body>
+    <h1>Assorted RISC OS Software</h1>
+
+    <p>
+Everything here, unless explicitly mentioned, should run on all versions of
+RISC OS from 3.10 onwards, and be 26/32 bit compatible. Some of the things
+here require other bits of software, there is a collection of links to these
+on the <a href="resources.html">resources page</a>. To make comments or
+suggestions, or report any bugs feel free to e-mail to the address at the
+bottom of this page.
+    </p>
+
+    <br><hr>
+    <h2>Avalanche VNC Client</h2>
+    <p>
+A VNC client allowing remote control of computers over a local network or
+the internet. You need to be running a VNC server on the remote machine.
+    </p>
+    <p><img src="img/avalanche.jpg" align="right">Features include:
+     <ul>
+       <li>Raw, CopyRect, RRE, CoRRE, Hextile and ZLib encodings.</li>
+       <li>Unauthenticated sessions and VNC authentication.</li>
+       <li>6, 15 and 24bpp true colour and 8bpp colour mapped screens.</li>
+       <li>Screen resizing (DeaktopSize pseudo-encoding).</li>
+       <li>Local pointer display (Cursor and XCursor pseudo-encodings).</li>
+       <li>Hotlist/choices (needs <a href="resources.html">ConfiX</a>).</li>
+       <li>UTF-8/forign alphabet support (RISC OS 5).</li>
+       <li>Multiple scaled views, screen export, screen auto-scroll.</li>
+       <li>Clipboard support.</li>
+       <li>Full screen mode</li>
+       <li>ARMv7 compatible.</li>
+     </ul>
+    </p>
+    <p>
+Optionally requires <a href="resources.html">ConfiX</a> (for hotlist/choices), BypassAlt (fixes Alt and Command key problems so that things like Alt-Enter or Alt-C (Command-C for mac users) work as expected - see below to download) and <a href="resources.html">SysLog</a>. <a href="https://github.com/effarig/ro_avalanche/releases">Download Avalanche</a>.
+    </p>
+ <!--
+    <br><hr>
+    <h2>BypassAlt</h2>
+    <p>
+A utility module which allows applications to disable the usual behaviour of
+the Alt keys. So, when enabled, Alt-C will generate a wimp key event for 'C'
+rather than '&#xa9;'. The Alt keys can still be interrogated using
+INKEY. Requires RISC OS 3.5+ <a href="download/bypassalt.zip">Download BypassAlt</a>.
+    </p>
+
+    <br><hr>
+    <h2>EtherUSB</h2>
+    <p>
+      A DeviceFS (i.e. RISC OS 5) USB driver for Ethernet devices.
+    </p>
+    <p>
+The driver supports concurrent use of numerous different types of USB Ethernet device. To support configuring hot-plugged devices reliably the DCI interface name (ej0, ej1, etc.) can be configured by MAC, Vendor/Product or USB bus location, using system variables.
+    </p>
+    <p>
+ As of version 0.14, EtherUSB is now part of <a href="https://www.riscosopen.org/">RISC OS Open</a> and is maintained in <a href="https://gitlab.riscosopen.org/RiscOS/Sources/Networking/Ethernet/EtherUSB">their GitLab repository<a>.
+    </p>
+    <br><hr>
+    <h2>SysLogDevice</h2>
+    <p>
+A write only DeviceFS driver directing all output to SysLog. Lets SysLog be
+used with standard file access calls, for example using fprintf() from C,
+BPUT from BASIC or any command line utility by using stream redirection.
+    </p>
+    <p>
+    For example: <tt>*Modules { &gt; Devices#Log=Test:$.SysLog }</tt>
+    </p>
+    <p>
+This is particularly useful for redirecting the error streams of
+applications as SysLogDevice allows an arbitrary number of open streams to
+any log.
+    </p>
+    <p>
+Requires <a href="resources.html">SysLog</a>.
+<a href="download/syslogdev.zip">Download SysLogDevice</a>.
+    </p>
+
+
+    <br><hr>
+    <h2>KeyMapper</h2>
+    <p>
+A small module which can redefine the key codes returned by keyboard or mouse
+drivers before they reach the kernel, allowing keys and mouse buttons to be
+swapped around. Requires RISC OS 3.5+ <a href="download/keymap.zip">Download KeyMapper</a>.
+    </p>
+
+    <br><hr>
+    <h2>Which</h2>
+    <p>
+Command line utility to find where a *command is in the system. It checks system variable aliases, modules and object on the run path reporting which one will be executed. <a href="download/which.zip">Download Which</a>.
+    </p>
+
+    <br><hr>
+    <h2>WatchLog</h2>
+    <p>
+Command line utility to output text written at the end of a file, similarly to <tt>tail -f</tt> in *NIX. Works nicely in TaskWindows with SysLogs. <a href="download/watchlog.zip">Download WatchLog</a>.
+    </p>
+
+    <br><hr>
+    <h2>LSOF</h2>
+    <p>
+Command line utility listing open files, not much else to say really. <a href="download/lsof.zip">Download LsOF</a>.
+    </p>
+-->
+  </body>
+</html>
